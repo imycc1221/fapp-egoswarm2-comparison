@@ -1,0 +1,3 @@
+hits.py c3d925b45ee3, world dyn_sando_easy, workspace <local workspace>
+dyn_expert from <local workspace>/src/dyn_obstacle_nav/dyn_expert/dyn_expert/__init__.py
+dyn_sando_easy: 28.3 min, 3616 m, static 63, dynamic 6

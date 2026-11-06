@@ -1,0 +1,59 @@
+<launch>
+    <!-- EGO-Swarm2 (kotakondo/EGO-Planner-v2 dynus_benchmark 6917c9f, reproduced SANDO Table VI) with the ORIGINAL
+         EGO-Planner-v2 settings (ZJU-FAST-Lab 9d85475, main_ws run_in_sim.xml / advanced_param.xml / simulator.xml)
+         in the senior's worlds (PLAN_SW.md). Only map size, start and goal input come from the world / mission. -->
+    <arg name="map_size_x" default="230.0"/>
+    <arg name="map_size_y" default="50.0"/>
+    <arg name="map_size_z" value="3.0"/>       <!-- original moving_obstacles_avoidance.launch -->
+    <arg name="init_z" default="2.0"/>         <!-- the senior's route height -->
+
+    <include file="$(find ego_planner)/launch/include/run_in_sim.xml">
+        <arg name="drone_id" value="0"/>
+        <arg name="init_x" value="0.0"/>
+        <arg name="init_y" value="0.0"/>
+        <arg name="init_z" value="$(arg init_z)"/>
+        <arg name="map_size_x" value="$(arg map_size_x)"/>
+        <arg name="map_size_y" value="$(arg map_size_y)"/>
+        <arg name="map_size_z" value="$(arg map_size_z)"/>
+        <arg name="odom_topic" value="visual_slam/odom"/>
+        <arg name="flight_type" value="1"/>    <!-- goals from /goal_with_id (GoalSet), sent by mission.py -->
+        <arg name="planning_horizon" value="7.5"/>
+        <arg name="local_update_range_x" value="5.5"/>
+        <arg name="local_update_range_y" value="5.5"/>
+        <arg name="local_update_range_z" value="2.0"/>
+        <arg name="fading_time" value="1000.0"/>
+        <arg name="use_linf_feas" value="false"/>  <!-- original: L2 -->
+    </include>
+
+    <!-- original values of the parameters the fork changed (diff of advanced_param.xml / run_in_sim.xml) -->
+    <param name="/drone_0_ego_planner_node/manager/max_vel" value="1.5"/>
+    <param name="/drone_0_ego_planner_node/manager/max_acc" value="6.0"/>
+    <param name="/drone_0_ego_planner_node/optimization/max_vel" value="1.5"/>
+    <param name="/drone_0_ego_planner_node/optimization/max_acc" value="6.0"/>
+    <param name="/drone_0_ego_planner_node/optimization/max_jer" value="20.0"/>
+    <param name="/drone_0_ego_planner_node/optimization/weight_time" value="10.0"/>
+    <param name="/drone_0_ego_planner_node/grid_map/obstacles_inflation" value="0.1"/>
+    <param name="/drone_0_ego_planner_node/grid_map/local_map_margin" value="10"/>
+    <param name="/drone_0_ego_planner_node/grid_map/virtual_ceil" value="3.0"/>
+    <param name="/drone_0_ego_planner_node/grid_map/virtual_ground" value="-0.1"/>
+    <param name="/drone_0_ego_planner_node/grid_map/ground_height" value="-0.01"/>
+    <param name="/drone_0_ego_planner_node/grid_map/max_ray_length" value="4.5"/>
+
+    <!-- harness fix after smoke 1: pcl_render_node stamps its cloud frame "map" (in EGO-Planner-v2's simulator map = world),
+         and the fork's grid_map drops any cloud it cannot transform to "world" -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="world_to_map" args="0 0 0 0 0 0 world map"/>
+
+    <!-- original simulated sensor (simulator.xml; the fork commented it out and fed a cloud directly) -->
+    <node pkg="local_sensing_node" type="pcl_render_node" name="drone_0_pcl_render_node" output="screen">
+        <rosparam command="load" file="$(find local_sensing_node)/params/camera.yaml"/>
+        <param name="sensing_horizon" value="5.0"/>
+        <param name="sensing_rate" value="30.0"/>
+        <param name="estimation_rate" value="30.0"/>
+        <param name="map/x_size" value="$(arg map_size_x)"/>
+        <param name="map/y_size" value="$(arg map_size_y)"/>
+        <param name="map/z_size" value="$(arg map_size_z)"/>
+        <remap from="~global_map" to="/map_generator/global_cloud"/>
+        <remap from="~odometry" to="/drone_0_visual_slam/odom"/>
+        <remap from="~pcl_render_node/cloud" to="/SQ01s/camera/cloud"/>  <!-- the fork's grid_map cloud input -->
+    </node>
+</launch>

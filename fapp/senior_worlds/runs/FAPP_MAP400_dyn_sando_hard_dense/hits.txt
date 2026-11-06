@@ -1,0 +1,3 @@
+hits.py c3d925b45ee3, world dyn_sando_hard_dense, workspace <local workspace>
+dyn_expert from <local workspace>/src/dyn_obstacle_nav/dyn_expert/dyn_expert/__init__.py
+dyn_sando_hard_dense: 152.0 min, 416 m, static 6, dynamic 0

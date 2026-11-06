@@ -1,0 +1,16 @@
+59c59
+< RUN cmake .. && make -j
+---
+> RUN cmake .. && make -j3
+65c65
+< RUN DUMMY=${DUMMY} git clone https://github.com/kotakondo/EGO-Planner-v2.git
+---
+> RUN DUMMY=${DUMMY} git clone https://github.com/kotakondo/EGO-Planner-v2.git -b dynus_benchmark && cd EGO-Planner-v2 && git checkout 6917c9f30aac90f9b553f3743ca718c3ce55b2a4 && git log --oneline -1
+79c79
+< RUN bash -c "source /opt/ros/noetic/setup.bash && catkin_make -DCMAKE_BUILD_TYPE=Release"
+---
+> RUN bash -c "source /opt/ros/noetic/setup.bash && catkin_make -j3 -DCMAKE_BUILD_TYPE=Release"
+93c93
+< RUN bash -c "source /opt/ros/noetic/setup.bash && source /home/kota/ego_swarm_v2_ws/src/EGO-Planner-v2/swarm-playground/main_ws/devel/setup.bash && catkin_make -DBUILD_TYPE=Release"
+---
+> RUN bash -c "source /opt/ros/noetic/setup.bash && source /home/kota/ego_swarm_v2_ws/src/EGO-Planner-v2/swarm-playground/main_ws/devel/setup.bash && catkin_make -j3 -DBUILD_TYPE=Release"

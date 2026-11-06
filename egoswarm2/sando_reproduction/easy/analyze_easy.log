@@ -1,0 +1,156 @@
+================================================================================
+EGO-SWARM V2 DYNAMIC BENCHMARK ANALYSIS
+================================================================================
+Loading: benchmark_ego_swarm_v2_20261105_213712.csv
+  Trials: 10
+
+
+================================================================================
+POST-PROCESSING COLLISIONS FROM ROSBAGS (marker-based)
+================================================================================
+
+Trial 0: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3047, obstacles=50 -> collisions=0, min_dist=0.214m
+
+Trial 1: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3001, obstacles=50 -> collisions=0, min_dist=0.274m
+
+Trial 2: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3047, obstacles=50 -> collisions=0, min_dist=0.257m
+
+Trial 3: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3001, obstacles=50 -> collisions=0, min_dist=0.260m
+
+Trial 4: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3013, obstacles=50 -> collisions=0, min_dist=0.364m
+
+Trial 5: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3125, obstacles=50 -> collisions=0, min_dist=0.330m
+
+Trial 6: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3174, obstacles=50 -> collisions=0, min_dist=0.357m
+
+Trial 7: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3215, obstacles=50 -> collisions=0, min_dist=0.456m
+
+Trial 8: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=3026, obstacles=50 -> collisions=0, min_dist=0.323m
+
+Trial 9: topics=['/broadcast_traj_to_planner', '/drone_0_ego_planner_node/grid_map/occupancy_inflate', '/drone_0_ego_planner_node/optimal_list', '/drone_0_odom_visualization/path', '/drone_0_odom_visualization/robot', '/drone_0_planning/pos_cmd', '/drone_0_visual_slam/odom', '/dynamic_forest/markers'] drone_pts=2990, obstacles=50 -> collisions=0, min_dist=0.315m
+
+Post-processed data saved: /home/kota/data_dynamic/easy_benchmark_20261105_213712/benchmark_ego_swarm_v2_postprocessed.csv
+
+================================================================================
+RECOMPUTING TRAVEL TIME & PATH LENGTH FROM ROSBAGS
+  Goal position: [105.0, 0.0, 2.0]
+================================================================================
+
+Trial 0: travel_time=24.13s, path_length=105.52m
+
+Trial 1: travel_time=23.80s, path_length=105.61m
+
+Trial 2: travel_time=24.10s, path_length=106.15m
+
+Trial 3: travel_time=23.74s, path_length=105.93m
+
+Trial 4: travel_time=23.76s, path_length=105.51m
+
+Trial 5: travel_time=24.63s, path_length=106.21m
+
+Trial 6: travel_time=25.43s, path_length=107.99m
+
+Trial 7: travel_time=25.72s, path_length=108.38m
+
+Trial 8: travel_time=24.06s, path_length=105.00m
+
+Trial 9: travel_time=23.55s, path_length=106.26m
+
+
+Recomputed metrics for 10/10 trials
+
+================================================================================
+RECOMPUTING CONSTRAINT VIOLATIONS FROM ROSBAGS (L-inf)
+================================================================================
+
+Trial 0: vel=10.90%, acc=0.00%, jerk=0.00%
+
+Trial 1: vel=14.96%, acc=0.00%, jerk=0.00%
+
+Trial 2: vel=10.67%, acc=0.00%, jerk=0.00%
+
+Trial 3: vel=9.90%, acc=0.00%, jerk=0.00%
+
+Trial 4: vel=10.95%, acc=0.00%, jerk=0.00%
+
+Trial 5: vel=6.31%, acc=0.00%, jerk=0.00%
+
+Trial 6: vel=7.21%, acc=0.00%, jerk=0.00%
+
+Trial 7: vel=11.98%, acc=0.00%, jerk=0.00%
+
+Trial 8: vel=13.33%, acc=0.00%, jerk=0.00%
+
+Trial 9: vel=17.94%, acc=0.00%, jerk=0.00%
+
+
+Recomputed violations for 10/10 trials
+
+Computing statistics...
+
+  Success defined as: goal_reached AND collision_free
+  Computing metrics from 10 successful runs
+    - Total trials: 10
+    - Goal reached: 10
+    - Collision-free: 10
+    - Successful (both): 10 (100.0%)
+
+================================================================================
+BENCHMARK ANALYSIS RESULTS
+================================================================================
+
+OVERVIEW
+  Total trials: 10
+  SUCCESS RATE (R^succ): 100.0%
+    (Success = goal_reached AND collision_free)
+  Successful runs: 10
+
+  Breakdown:
+    - Goal reached: 100.0%
+    - Collision-free: 100.0%
+    - Timeout: 0.0%
+
+NOTE: Performance metrics computed from 10 successful runs only
+
+COMPUTATION TIME (per optimization, from successful runs)
+  Init time: 0.02 +/- 0.00 ms
+  Opt time:  0.50 +/- 0.14 ms
+  Total:     0.52 +/- 0.14 ms
+
+PERFORMANCE (from successful runs)
+  Travel time: 24.29 +/- 0.74 s
+  Path length: 106.26 +/- 1.09 m
+  Path efficiency: 1.012
+
+VELOCITY / ACCELERATION (from successful runs)
+  Avg velocity: 4.34 +/- 0.12 m/s
+  Max velocity: 5.02 +/- 0.00 m/s
+  Avg acceleration: 1.34 +/- 0.29 m/s^2
+  Max acceleration: 8.13 +/- 0.93 m/s^2
+
+SMOOTHNESS (from successful runs)
+  Jerk integral: 144.17
+  Jerk RMS: 8.87
+
+SAFETY (from successful runs)
+  Min distance to obstacles (d_min): 0.315 +/- 0.069 m
+  Total collision events: 0
+
+CONSTRAINT VIOLATIONS (from successful runs)
+  VEL violation rate: 11.4%
+  ACC violation rate: 0.0%
+  JERK violation rate: 0.0%
+
+Summary saved: /home/kota/data_dynamic/easy_benchmark_20261105_213712/benchmark_summary.csv
+
+Warning: DYNUS table not found at /home/kkondo/paper_writing/DYNUS_v3/tables/dynamic_benchmark.tex
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================
+
+Generated files:
+  1. /home/kota/data_dynamic/easy_benchmark_20261105_213712/benchmark_ego_swarm_v2_postprocessed.csv (if rosbags processed)
+  2. /home/kota/data_dynamic/easy_benchmark_20261105_213712/benchmark_summary.csv
+  3. /home/kkondo/paper_writing/DYNUS_v3/tables/dynamic_benchmark.tex (updated)
+
