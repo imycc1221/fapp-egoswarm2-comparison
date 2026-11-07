@@ -1,0 +1,44 @@
+{
+ "world": "dyn_sando_medium",
+ "episodes": 24,
+ "passes": 3,
+ "reached": 2,
+ "SR": 66.7,
+ "CR": 33.3,
+ "passes_static": 1,
+ "passes_dynamic": 2,
+ "whole_run_static": 1,
+ "whole_run_dynamic": 2,
+ "distance_m": 315.3,
+ "time_min": 16.57,
+ "avg_speed": 0.317,
+ "per_pass": [
+  {
+   "pass_": 1,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.78,
+   "path": 106.9,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 2,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.82,
+   "path": 107.9,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 3,
+   "outcome": "timeout",
+   "merged": true,
+   "time": 921.45,
+   "path": 100.5,
+   "static": 1,
+   "dynamic": 2
+  }
+ ]
+}

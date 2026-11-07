@@ -9,14 +9,15 @@ cat /root/fapp_ws/src/FAPP/.git/HEAD 2>/dev/null >> meta.txt; (cd /root/fapp_ws/
 roscore > roscore.log 2>&1 & sleep 3
 python3 /sw/scenario_world.py _scenario:=/scn/$W.yaml > world.log 2>&1 &
 sleep 2
-stdbuf -oL roslaunch /sw/sw_planner.launch map_size_x:=$MX map_size_y:=$MY > launch.log 2>&1 &
+stdbuf -oL roslaunch ${LAUNCH_FILE:-/sw/sw_planner.launch} map_size_x:=$MX map_size_y:=$MY > launch.log 2>&1 &
 sleep 2
 stdbuf -oL roslaunch mot_mapping sim_mapping.launch > mapping.log 2>&1 &
 sleep 3
-python3 /sw/mission.py _name:=$W _passes:=$N _scenario:=/scn/$W.yaml > mission.log 2>&1 &
+python3 /sw/mission.py _name:=$W _passes:=$N _scenario:=/scn/$W.yaml _stop_speed:=${STOP_SPEED:-0} > mission.log 2>&1 &
 MP=$!
 for i in $(seq 1 $MAXT); do sleep 1; kill -0 $MP 2>/dev/null || break; done
 kill -0 $MP 2>/dev/null && { echo "MAX TIME reached" >> meta.txt; kill -INT $MP; sleep 3; }
+rosparam get /drone_0_fapp_planner_node/grid_map > params_grid_map.yaml 2>&1
 pkill -INT -f roslaunch; sleep 4; pkill -INT -f ros; sleep 2
 grep -c "process has died" launch.log mapping.log >> meta.txt
 echo "end $(date -u +%FT%TZ)" >> meta.txt

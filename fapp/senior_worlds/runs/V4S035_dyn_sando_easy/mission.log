@@ -1,0 +1,49 @@
+[INFO] [1793983798.808837]: pass 1: goal [105.0, 0.0] limit 290 s
+[INFO] [1793983832.000883]: pass 1: reached in 33.2 s
+[INFO] [1793983832.008954]: pass 2: goal [0.0, 0.0] limit 290 s
+[INFO] [1793983867.089342]: pass 2: reached in 35.1 s
+[INFO] [1793983867.095218]: pass 3: goal [105.0, 0.0] limit 290 s
+[INFO] [1793983900.522533]: pass 3: reached in 33.4 s
+[INFO] [1793983900.528553]: pass 4: goal [0.0, 0.0] limit 290 s
+[INFO] [1793983934.942433]: pass 4: reached in 34.4 s
+[INFO] [1793983934.948470]: pass 5: goal [105.0, 0.0] limit 290 s
+[INFO] [1793983968.022451]: pass 5: reached in 33.1 s
+[INFO] [1793983968.035318]: pass 6: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984003.035065]: pass 6: reached in 35.0 s
+[INFO] [1793984003.039992]: pass 7: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984038.838009]: pass 7: reached in 35.8 s
+[INFO] [1793984038.844609]: pass 8: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984071.054090]: pass 8: reached in 32.2 s
+[INFO] [1793984071.058717]: pass 9: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984105.988587]: pass 9: reached in 34.9 s
+[INFO] [1793984105.995367]: pass 10: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984141.249908]: pass 10: reached in 35.3 s
+[INFO] [1793984141.255306]: pass 11: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984175.297010]: pass 11: reached in 34.0 s
+[INFO] [1793984175.305198]: pass 12: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984210.801027]: pass 12: reached in 35.5 s
+[INFO] [1793984210.807634]: pass 13: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984244.902276]: pass 13: reached in 34.1 s
+[INFO] [1793984244.908496]: pass 14: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984280.648753]: pass 14: reached in 35.8 s
+[INFO] [1793984280.656054]: pass 15: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984314.682648]: pass 15: reached in 34.0 s
+[INFO] [1793984314.691585]: pass 16: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984349.197157]: pass 16: reached in 34.5 s
+[INFO] [1793984349.202078]: pass 17: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984384.456094]: pass 17: reached in 35.2 s
+[INFO] [1793984384.463664]: pass 18: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984419.035315]: pass 18: reached in 34.6 s
+[INFO] [1793984419.040832]: pass 19: goal [105.0, 0.0] limit 290 s
+[INFO] [1793984455.067757]: pass 19: reached in 36.0 s
+[INFO] [1793984455.078611]: pass 20: goal [0.0, 0.0] limit 290 s
+[INFO] [1793984745.098452]: pass 20: timeout in 290.0 s
+[INFO] [1793984745.108272]: pass 21: goal [0.0, 0.0] limit 258 s
+[INFO] [1793985003.044719]: pass 21: timeout in 257.9 s
+[INFO] [1793985003.055816]: pass 22: goal [0.0, 0.0] limit 258 s
+[INFO] [1793985260.977700]: pass 22: timeout in 257.9 s
+[INFO] [1793985260.985436]: pass 23: goal [0.0, 0.0] limit 258 s
+[INFO] [1793985518.876155]: pass 23: timeout in 257.9 s
+[INFO] [1793985518.888930]: pass 24: goal [0.0, 0.0] limit 258 s
+[INFO] [1793985776.820776]: pass 24: timeout in 257.9 s
+[INFO] [1793985776.927367]: MISSION DONE dyn_sando_easy: 19/24 reached

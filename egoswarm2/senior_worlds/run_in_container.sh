@@ -9,11 +9,11 @@ mkdir -p /home/kota/data   # the planner writes its timing CSV there (ego_replan
 cd /out; echo "world $W passes $N map $MX x $MY started $(date -u +%FT%TZ)" > meta.txt
 (cd $EGO && git log -1 --format='ego %H') >> meta.txt
 roscore > roscore.log 2>&1 & sleep 3
-stdbuf -oL roslaunch /sw/sw_ego.launch map_size_x:=$MX map_size_y:=$MY > launch.log 2>&1 &
+stdbuf -oL roslaunch ${LAUNCH_FILE:-/sw/sw_ego.launch} map_size_x:=$MX map_size_y:=$MY > launch.log 2>&1 &
 sleep 4
 python3 -u /sw/ego_world.py _scenario:=/scn/$W.yaml > world.log 2>&1 &
 sleep 3
-python3 -u /sw/mission.py _name:=$W _passes:=$N _scenario:=/scn/$W.yaml _goal_z:=2.0 > mission.log 2>&1 &
+python3 -u /sw/mission.py _name:=$W _passes:=$N _scenario:=/scn/$W.yaml _stop_speed:=${STOP_SPEED:-0} _goal_z:=2.0 > mission.log 2>&1 &
 MP=$!
 for i in $(seq 1 $MAXT); do sleep 1; kill -0 $MP 2>/dev/null || break; done
 kill -0 $MP 2>/dev/null && { echo "MAX TIME reached" >> meta.txt; kill -INT $MP; sleep 3; }

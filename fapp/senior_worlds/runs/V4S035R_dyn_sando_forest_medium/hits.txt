@@ -1,0 +1,4 @@
+hits.py d6a70ecf6e79, world dyn_sando_forest_medium, workspace <local workspace>
+dyn_expert from <local workspace>/src/dyn_obstacle_nav/dyn_expert/dyn_expert/__init__.py
+dyn_sando_forest_medium: 13.7 min, 2631 m, static 9, dynamic 0
+dyn_sando_forest_medium: out of bounds 1 (max 8.70 m beyond bounds + 1 m, at t [375.6])

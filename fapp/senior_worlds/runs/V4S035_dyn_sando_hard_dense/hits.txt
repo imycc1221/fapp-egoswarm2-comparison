@@ -1,0 +1,4 @@
+hits.py d6a70ecf6e79, world dyn_sando_hard_dense, workspace <local workspace>
+dyn_expert from <local workspace>/src/dyn_obstacle_nav/dyn_expert/dyn_expert/__init__.py
+dyn_sando_hard_dense: 21.0 min, 2000 m, static 5, dynamic 6
+dyn_sando_hard_dense: out of bounds 0

@@ -1,0 +1,60 @@
+{
+ "world": "dyn_sando_forest_hard",
+ "passes": 5,
+ "oob_passes": 0,
+ "SR_with_oob": 40.0,
+ "SR_without_oob": 40.0,
+ "CR": 60.0,
+ "per_pass": [
+  {
+   "pass_": 1,
+   "outcome": "reached",
+   "merged": false,
+   "time": 39.31,
+   "path": 114.6,
+   "static": 1,
+   "dynamic": 0,
+   "oob": false
+  },
+  {
+   "pass_": 2,
+   "outcome": "reached",
+   "merged": false,
+   "time": 41.33,
+   "path": 114.2,
+   "static": 0,
+   "dynamic": 0,
+   "oob": false
+  },
+  {
+   "pass_": 3,
+   "outcome": "reached",
+   "merged": false,
+   "time": 36.46,
+   "path": 111.1,
+   "static": 1,
+   "dynamic": 0,
+   "oob": false
+  },
+  {
+   "pass_": 4,
+   "outcome": "reached",
+   "merged": false,
+   "time": 36.38,
+   "path": 112.1,
+   "static": 0,
+   "dynamic": 0,
+   "oob": false
+  },
+  {
+   "pass_": 5,
+   "outcome": "timeout",
+   "merged": true,
+   "time": 2303.02,
+   "path": 167.1,
+   "static": 1,
+   "dynamic": 0,
+   "oob": false
+  }
+ ]
+}

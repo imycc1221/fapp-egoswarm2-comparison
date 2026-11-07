@@ -21,6 +21,7 @@ GOAL_TOL, TF, V_NOM, GOAL_Z = 0.6, 4.0, 1.5, 1.5
 def main():
     rospy.init_node("senior_mission")
     name = rospy.get_param("~name"); n_pass = int(rospy.get_param("~passes", 24))
+    STOP_SPEED = float(rospy.get_param("~stop_speed", 0.0))   # > 0: a pass ends only when also slower than this (PLAN_V4 amendment 1)
     while not rospy.has_param("/senior_world/t0") and not rospy.is_shutdown():
         rospy.sleep(0.1)
     t0 = rospy.get_param("/senior_world/t0")
@@ -34,6 +35,11 @@ def main():
         t = m.header.stamp.to_sec() - t0
         yaw = math.atan2(2 * (q.w * q.z + q.x * q.y), 1 - 2 * (q.y * q.y + q.z * q.z))
         rows.append((t, t, time.time(), p.x, p.y, p.z, yaw)); st["p"] = np.array([p.x, p.y, p.z]); st["t"] = t
+        k = len(rows) - 1                                   # speed over the last >= 0.2 s of poses
+        while k > 0 and t - rows[k][0] < 0.2:
+            k -= 1
+        if t - rows[k][0] > 0:
+            st["v"] = float(np.linalg.norm(st["p"] - np.array(rows[k][3:6])) / (t - rows[k][0]))
 
     rospy.Subscriber("/drone_0_visual_slam/odom", Odometry, on_odom, queue_size=100)
     pub = rospy.Publisher("/goal_with_id", GoalSet, queue_size=1, latch=True)
@@ -51,7 +57,7 @@ def main():
         rospy.loginfo(f"pass {len(eps) + 1}: goal {g.tolist()} limit {limit:.0f} s")
         outcome = None
         while not rospy.is_shutdown():
-            if np.linalg.norm(st["p"] - np.r_[g, GOAL_Z]) < GOAL_TOL:
+            if np.linalg.norm(st["p"] - np.r_[g, GOAL_Z]) < GOAL_TOL and (STOP_SPEED <= 0 or st.get("v", 1e9) < STOP_SPEED):
                 outcome = "reached"; break
             if st["t"] - t_start > limit:
                 outcome = "timeout"; break

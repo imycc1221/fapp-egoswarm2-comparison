@@ -1,0 +1,13 @@
+[INFO] [1793973391.290898]: pass 1: goal [105.0, 0.0] limit 290 s
+[INFO] [1793973463.635180]: pass 1: reached in 72.4 s
+[INFO] [1793973463.642098]: pass 2: goal [0.0, 0.0] limit 288 s
+[INFO] [1793973558.304626]: pass 2: reached in 94.7 s
+[INFO] [1793973558.313130]: pass 3: goal [105.0, 0.0] limit 288 s
+[INFO] [1793973652.026098]: pass 3: reached in 93.7 s
+[INFO] [1793973652.033587]: pass 4: goal [0.0, 0.0] limit 288 s
+[INFO] [1793973746.666349]: pass 4: reached in 94.6 s
+[INFO] [1793973746.681139]: pass 5: goal [105.0, 0.0] limit 288 s
+[INFO] [1793973838.627373]: pass 5: reached in 92.0 s
+[INFO] [1793973838.633297]: pass 6: goal [0.0, 0.0] limit 288 s
+[INFO] [1793973933.898872]: pass 6: reached in 95.3 s
+[INFO] [1793973933.948717]: MISSION DONE dyn_sando_easy: 6/6 reached

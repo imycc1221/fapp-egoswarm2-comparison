@@ -1,0 +1,4 @@
+hits.py d6a70ecf6e79, world dyn_sando_medium, workspace <local workspace>
+dyn_expert from <local workspace>/src/dyn_obstacle_nav/dyn_expert/dyn_expert/__init__.py
+dyn_sando_medium: 16.6 min, 315 m, static 1, dynamic 2
+dyn_sando_medium: out of bounds 0

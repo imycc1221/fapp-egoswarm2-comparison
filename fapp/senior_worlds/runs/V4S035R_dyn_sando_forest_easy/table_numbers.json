@@ -1,0 +1,233 @@
+{
+ "world": "dyn_sando_forest_easy",
+ "episodes": 24,
+ "passes": 24,
+ "reached": 24,
+ "SR": 79.2,
+ "CR": 20.8,
+ "passes_static": 5,
+ "passes_dynamic": 0,
+ "whole_run_static": 5,
+ "whole_run_dynamic": 0,
+ "distance_m": 2668.4,
+ "time_min": 14.96,
+ "avg_speed": 2.974,
+ "per_pass": [
+  {
+   "pass_": 1,
+   "outcome": "reached",
+   "merged": false,
+   "time": 34.08,
+   "path": 107.2,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 2,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.95,
+   "path": 107.1,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 3,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.34,
+   "path": 108.2,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 4,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.86,
+   "path": 108.0,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 5,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.59,
+   "path": 106.8,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 6,
+   "outcome": "reached",
+   "merged": false,
+   "time": 127.29,
+   "path": 200.8,
+   "static": 1,
+   "dynamic": 0
+  },
+  {
+   "pass_": 7,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.23,
+   "path": 107.3,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 8,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.23,
+   "path": 107.7,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 9,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.33,
+   "path": 108.2,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 10,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.03,
+   "path": 105.6,
+   "static": 1,
+   "dynamic": 0
+  },
+  {
+   "pass_": 11,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.13,
+   "path": 106.5,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 12,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.48,
+   "path": 107.5,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 13,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.92,
+   "path": 107.6,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 14,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.55,
+   "path": 106.8,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 15,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.73,
+   "path": 105.5,
+   "static": 1,
+   "dynamic": 0
+  },
+  {
+   "pass_": 16,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.34,
+   "path": 105.4,
+   "static": 1,
+   "dynamic": 0
+  },
+  {
+   "pass_": 17,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.21,
+   "path": 107.0,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 18,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.76,
+   "path": 107.1,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 19,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.64,
+   "path": 106.9,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 20,
+   "outcome": "reached",
+   "merged": false,
+   "time": 34.75,
+   "path": 110.5,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 21,
+   "outcome": "reached",
+   "merged": false,
+   "time": 34.9,
+   "path": 110.4,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 22,
+   "outcome": "reached",
+   "merged": false,
+   "time": 32.88,
+   "path": 106.5,
+   "static": 1,
+   "dynamic": 0
+  },
+  {
+   "pass_": 23,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.64,
+   "path": 107.0,
+   "static": 0,
+   "dynamic": 0
+  },
+  {
+   "pass_": 24,
+   "outcome": "reached",
+   "merged": false,
+   "time": 33.27,
+   "path": 106.9,
+   "static": 0,
+   "dynamic": 0
+  }
+ ]
+}
